@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
+imports = [../variables.nix];
   programs.waybar = {
     enable = true;
     settings = [{
@@ -45,17 +46,12 @@
 
       "custom/icon" = {
         format = "";
-        on-click = "~/.config/rofi/scripts/launcher_t1";
+        on-click = "${config.rofi-menu}";
       };
 
       "custom/separator" = { format = "──────"; };
 
       "battery" = { format = "{capacity}%"; };
-
-      "custom/rofi" = {
-        format = "";
-        on-click = "~/.config/rofi/scripts/launcher_t1";
-      };
 
       "custom/notification" = {
         tooltip = false;

@@ -7,8 +7,7 @@
   home.stateVersion = "23.05"; # Please read the comment before changing.
   # environment.
   home.packages =
-    [ pkgs.nixfmt pkgs.gtklock pkgs.ranger pkgs.papirus-icon-theme ];
-  programs.zsh.enable = true;
+    [ pkgs.nixfmt pkgs.gtklock pkgs.ranger pkgs.papirus-icon-theme pkgs.zinit];
   home.sessionVariables = { LC_ALL = "C.utf-8"; };
   home.file = { ".icons".source = ~/.nix-profile/share/icons; };
 
@@ -22,4 +21,5 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
 }
