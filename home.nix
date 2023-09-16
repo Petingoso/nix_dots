@@ -6,18 +6,19 @@
 
   home.stateVersion = "23.05"; # Please read the comment before changing.
   # environment.
-  home.packages = [
-    pkgs.nixfmt
-    pkgs.gtklock
-    pkgs.ranger
-  ];
+  home.packages =
+    [ pkgs.nixfmt pkgs.gtklock pkgs.ranger pkgs.papirus-icon-theme ];
+  programs.zsh.enable = true;
+  home.sessionVariables = { LC_ALL = "C.utf-8"; };
+  home.file = { ".icons".source = ~/.nix-profile/share/icons; };
 
-  home.file = {
+  gtk.iconTheme = {
+    package = pkgs.papirus-icon-theme;
+    name = "Papirus-Dark";
   };
 
-  home.sessionVariables = {
-    # EDITOR = "emacs";
-  };
+  home.sessionVariables.LOCALES_ARCHIVE =
+    "${pkgs.glibcLocales}/lib/locale/locale-archive";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
