@@ -8,6 +8,8 @@
   # environment.
   home.packages = [
     pkgs.nixfmt
+    pkgs.gtklock
+    pkgs.ranger
   ];
 
   home.file = {
