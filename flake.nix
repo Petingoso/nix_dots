@@ -11,6 +11,7 @@
 
     arkenfox = {
       url = "github:dwarfmaster/arkenfox-nixos";
+      inputs.nixpkgs.follows = "home-manager";
     };
   };
 
