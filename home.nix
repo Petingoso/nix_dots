@@ -16,7 +16,7 @@
   ];
 
   home.sessionVariables = { LC_ALL = "C.utf-8"; };
-  home.file = { ".icons".source = ~/.nix-profile/share/icons; };
+  home.file = { ".icons".source = "${builtins.getEnv "HOME"}/.nix-profile/share/icons"; };
 
   gtk.iconTheme = {
     package = pkgs.papirus-icon-theme;

@@ -13,14 +13,15 @@
       url = "github:dwarfmaster/arkenfox-nixos";
       inputs.nixpkgs.follows = "home-manager";
     };
+
   };
 
-  outputs = { self, nixpkgs, home-manager, arkenfox, ... }:
+  outputs = { self, nixpkgs, home-manager, arkenfox,  ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations.foobar = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.petarch = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;
