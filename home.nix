@@ -8,14 +8,14 @@
   # environment.
   home.packages = [
     pkgs.nixfmt
-    pkgs.gtklock
+    pkgs.swaylock-effects
     pkgs.ranger
     pkgs.papirus-icon-theme
     pkgs.zinit
     pkgs.pam
   ];
 
-  home.sessionVariables = { LC_ALL = "C.utf-8"; };
+  home.sessionVariables = { LANG = "en_GB.utf-8"; };
   home.file = { ".icons".source = "${builtins.getEnv "HOME"}/.nix-profile/share/icons"; };
 
   gtk.iconTheme = {

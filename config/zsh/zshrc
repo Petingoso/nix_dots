@@ -105,9 +105,9 @@ alias bat="bat --theme=gruvbox-dark"
 # alias btop="btop --utf-force"
 alias v='nvim'
 alias vc='nvim ~/Coding'
-alias vn='nvim ~/Documents/notes/index.md'
+alias vn='nvim ~/Documents/Notes/index.md'
 alias vj='nvim -c WikiJournal'
-alias cn='cd ~/Documents/notes'
+alias cn='cd ~/Documents/Notes'
 alias make='make -j$(nproc)'
 alias touhou6="cd ~/Games/Touhou\ 6\ \ -\ The\ Embodiment\ of\ Scarlet\ Devil/ && LANG=ja_JP.UTF-8 wine thprac\ v2.0.8.3.exe"
 alias xgo='xdg-open'
