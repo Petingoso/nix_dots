@@ -1,7 +1,7 @@
 _: {
      imports = [
      ./firefox.nix
-     # ./swaylock.nix
+     ./swaylock.nix
      ./ranger.nix
      ./rofi.nix
      ./swaync.nix
