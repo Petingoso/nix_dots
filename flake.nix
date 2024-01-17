@@ -16,12 +16,13 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, arkenfox,  ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, arkenfox, ... } :
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
       homeConfigurations.petarch = home-manager.lib.homeManagerConfiguration {
+        extraSpecialArgs = {inherit self;};
         pkgs = import nixpkgs {
           inherit system;
           config.allowUnfree = true;

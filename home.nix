@@ -10,8 +10,8 @@
     pkgs.nixfmt
     pkgs.ranger
     pkgs.papirus-icon-theme
-    pkgs.zinit
     pkgs.pam
+    pkgs.zinit
   ];
 
   home.sessionVariables = { LANG = "en_GB.utf-8"; };

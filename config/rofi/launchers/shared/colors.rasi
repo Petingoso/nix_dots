@@ -3,4 +3,4 @@
  **/
 
 
-@import "~/.config/rofi/colors/colors.rasi"
+@import "/tmp/themes/rofi/colors.rasi"

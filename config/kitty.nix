@@ -1,8 +1,6 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, self, ... }: {
   programs.kitty.enable = true;
-
- programs.kitty.extraConfig = builtins.readFile ./kitty/kitty_theme;
-
+  programs.kitty.extraConfig = "include /tmp/themes/kitty/kitty_theme";
 
   programs.kitty.settings = {
     font_family = "Jetbrains Mono";

@@ -8,5 +8,7 @@ _: {
      ./swaync.nix
      ./waybar.nix
      ./zsh.nix
+
+     ./scripts/default.nix
      ];
    }
