@@ -3,7 +3,7 @@
 {
   home.file.".local/bin/hyp" = {
     text = ''
-       #!/bin/sh
+       #!/bin/zsh
       cd ~
 
       mkdir -p /tmp/themes/kitty/
