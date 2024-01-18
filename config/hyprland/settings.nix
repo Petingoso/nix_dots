@@ -49,7 +49,7 @@
       shadow_render_power = 2;
       shadow_ignore_window = 1;
       shadow_offset = "8 8";
-      col.shadow = "0x44000000";
+     "col.shadow" = "0x44000000";
     };
 
     misc.disable_hyprland_logo = true;

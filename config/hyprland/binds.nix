@@ -2,7 +2,7 @@
   imports = [ ../../variables.nix ];
 
   wayland.windowManager.hyprland.settings = {
-    bindm = [ "ALT,mouse:272,movewindow" "ALT,,mouse:273,resizewindow" ];
+    bindm = [ "ALT,mouse:272,movewindow" "ALT,mouse:273,resizewindow" ];
     bind = [
       "ALT CONTROL, Q ,exit,"
       "ALT SHIFT, R, exec, hyprctl reload"
@@ -11,7 +11,7 @@
       "ALT, C, pseudo,"
       "ALT, F, fullscreen,"
 
-      "ALT, G, ~/.local/bin/togglegaps"
+      "ALT, G, exec, ~/.local/bin/togglegaps"
       "ALT, Return, exec, /usr/bin/kitty -1"
 
       "ALT, B, exec, pkill -SIGUSR1 'waybar'"
@@ -33,8 +33,8 @@
       "ALT CONTROL, X, exec,~/.local/bin/powermenu"
       "ALT CONTROL, K, exec,~/.local/bin/hypr_bindings"
 
-      "ALT CONTROL, E, hyprshade on blue-light-filter"
-      "ALT CONTROL, R, hyprshade off"
+      "ALT CONTROL, E,exec, hyprshade on blue-light-filter"
+      "ALT CONTROL, R,exec, hyprshade off"
 
       "ALT SHIFT, P, exec, gtklock -i"
 
@@ -55,8 +55,8 @@
       ",XF86AudioMute,exec,amixer -D pulse set Master 1+ toggle"
       ",XF86Calculator,exec,qalculate-gtk"
 
-      "ALT, tab, workspace +1"
-      "ALT SHIFT, tab, workspace -1"
+      "ALT, tab, workspace, +1"
+      "ALT SHIFT, tab, workspace,, -1"
       "ALT, period, focusmonitor,r"
       "ALT, comma, focusmonitor,l"
       "ALT SHIFT,period,movewindow,mon:r"

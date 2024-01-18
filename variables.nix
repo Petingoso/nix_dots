@@ -5,6 +5,6 @@
   };
   config = {
     rofi-menu =
-      "${pkgs.rofi}/bin/rofi -show drun -theme ${self}/config/rofi/launchers/theme.rasi";
+      "/usr/local/bin/rofi -show drun -theme ${self}/config/rofi/launchers/menu.rasi";
   };
 }

@@ -19,5 +19,6 @@
 
     "EDITOR,neovim"
     "VISUAL,neovim"
+    "LC_ALL,C"
   ];
 }
