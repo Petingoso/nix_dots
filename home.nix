@@ -4,15 +4,11 @@
   home.username = "petarch";
   home.homeDirectory = "/home/petarch/";
 
-  home.stateVersion = "23.05"; # Please read the comment before changing.
+  home.stateVersion = "24.05"; # Please read the comment before changing.
+
   # environment.
-  home.packages = [
-    pkgs.nixfmt
-    pkgs.ranger
-    pkgs.papirus-icon-theme
-    pkgs.pam
-    pkgs.zinit
-  ];
+  home.packages =
+    [ pkgs.nixfmt pkgs.ranger pkgs.papirus-icon-theme pkgs.pam pkgs.zinit ];
 
   home.sessionVariables = { LANG = "en_GB.utf-8"; };
   home.file = {

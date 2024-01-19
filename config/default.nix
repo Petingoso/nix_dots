@@ -4,6 +4,7 @@ _: {
     ./gtklock.nix
     ./hyprland.nix
     ./kitty.nix
+    ./nvim.nix
     ./ranger.nix
     ./rofi.nix
     ./swaync.nix

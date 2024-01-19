@@ -1,11 +1,5 @@
 { config, pkgs, theme, ... }: {
 
-  nixpkgs.config.packageOverrides = pkgs: {
-    nur = import (fetchTarball {
-      url = "https://github.com/nix-community/NUR/archive/master.tar.gz";
-    }) { inherit pkgs; };
-  };
-
   programs.firefox.arkenfox.enable = true;
   programs.firefox.arkenfox.version = "master";
 
@@ -40,7 +34,7 @@
     profiles.Default = {
       arkenfox = {
         enable = true;
-        "0800"."0804"."browser.search.suggest.enabled".value = true;
+        # "0800"."0804"."browser.search.suggest.enabled".value = true;
         "2800"."2811"."privacy.cpd.history".value = false;
         "2800"."2820"."privacy.clearOnShutdown.history".value = false;
         "5000"."5001"."browser.privatebrowsing.autostart".value = false;
@@ -80,7 +74,7 @@
           "Wikipedia (en)".metaData.alias = "@wiki";
         };
       };
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      extensions = with config.nur.repos.rycee.firefox-addons; [
         ublock-origin
         bitwarden
         tree-style-tab

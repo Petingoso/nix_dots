@@ -3,8 +3,8 @@
   wayland.windowManager.hyprland.settings = {
     exec = [ "pkill waybar;waybar &" ];
     exec-once = [
-      "GDK_BACKEND= x11 pcloud"
-      "xss-lock gtklock -i"
+      "GDK_BACKEND=x11 pcloud"
+      "xss-lock 'gtklock -i'"
       "swaync"
       "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
       "fcitx5"
