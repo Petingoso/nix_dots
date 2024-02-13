@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }: {
 
-  home.file."./.config/nvim1" = {
+  home.file."./.config/nvim" = {
 source = ./nvim;
 recursive = true;
   };
