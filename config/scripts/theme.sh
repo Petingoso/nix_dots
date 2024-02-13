@@ -5,7 +5,7 @@ hypr_dir="/tmp/themes/hyprland"
 rofi_dir="/tmp/themes/rofi"
 kitty_dir="/tmp/themes/kitty"
 vscodium_settings="$HOME/.config/VSCodium/User/settings.json"
-nvim_settings="$HOME/.config/nvim/lua/core/settings.lua"
+nvim_settings="/tmp/themes/nvim/theme"
 
 
 prompt="rofi -dmenu -theme ~/nixfiles/config/rofi/launchers/theme.rasi"
