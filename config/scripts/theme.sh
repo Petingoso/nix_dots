@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
 # Directory
-hypr_dir="$HOME/.config/hypr/themes"
-rofi_dir="$HOME/.config/rofi/colors"
-kitty_dir="$HOME/.config/kitty"
-waybar_dir="$HOME/.config/waybar"
+hypr_dir="/tmp/themes/hyprland"
+rofi_dir="/tmp/themes/rofi"
+kitty_dir="/tmp/themes/kitty"
 vscodium_settings="$HOME/.config/VSCodium/User/settings.json"
 nvim_settings="$HOME/.config/nvim/lua/core/settings.lua"
 
 
-prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/theme.rasi"
+prompt="rofi -dmenu -theme ~/nixfiles/config/rofi/launchers/theme.rasi"
 
 # Theme
 cancel="窱 Cancel"
@@ -28,10 +27,9 @@ option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6\n$theme7\n
 
 change_theme()
 {
-	cp ${hypr_dir}/$1.conf ${hypr_dir}/color.thmswitch
+	cp ${hypr_dir}/$1.conf ${hypr_dir}/hypr_theme 
 	cp ${rofi_dir}/$1.rasi ${rofi_dir}/colors.rasi
-	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.thmswitch
-	cp ${waybar_dir}/all.css ${waybar_dir}/style.css
+	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/kitty_theme
 	sed -i 's/\(.*colorscheme\s*\)[^"]*/\1'"$1"'/' $nvim_settings #sed to switch color
 	if [[ "$1" == "cozy-night" ]]; then
 		# nvim
@@ -41,14 +39,11 @@ change_theme()
 		# nvim
 		sed -i 's/\(.*colorscheme\s*\)[^"]*/\1'"catppuccin"'/' $nvim_settings
 
-	elif [[ "$1" == "everforest" ]]; then
-		#waybar
-		cp ${waybar_dir}/everforest.css ${waybar_dir}/style.css
 	fi
 
 	hyprctl reload # restart hyprland
 	kill -USR1 $(pidof kitty) #restart kitty
-	pywalfox update #firefox pywal integration
+	# pywalfox update #firefox pywal integration
 }
 
 gkt2gsetting(){ # apply gtk settings
