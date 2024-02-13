@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
 
   wayland.windowManager.hyprland.settings = {
-    exec = [ "pkill waybar;waybar &" ];
+    exec = [ "pkill waybar;/usr/bin/waybar &" ];
     exec-once = [
       "GDK_BACKEND=x11 pcloud"
       "xss-lock 'gtklock -i'"

@@ -34,7 +34,8 @@ zinit light-mode for					\
 	raisty/alt-and-select				\
 	xylous/gitstatus				\
 	joshskidmore/zsh-fzf-history-search		\
-	romkatv/powerlevel10k
+	romkatv/powerlevel10k				\
+	nix-community/nix-zsh-completions
 
 ################################
 

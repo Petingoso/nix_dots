@@ -8,9 +8,9 @@
 
   # environment.
   home.packages =
-    [ pkgs.nixfmt pkgs.ranger pkgs.papirus-icon-theme pkgs.pam pkgs.zinit ];
+    [ pkgs.nixfmt pkgs.ranger pkgs.papirus-icon-theme pkgs.pam pkgs.zinit pkgs.nh];
 
-  home.sessionVariables = { LANG = "en_GB.utf-8"; };
+  home.sessionVariables = { LANG = "en_GB.utf-8"; FLAKE = "~/nixfiles/";};
   home.file = {
     ".icons".source = "${builtins.getEnv "HOME"}/.nix-profile/share/icons";
   };

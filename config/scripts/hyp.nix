@@ -14,7 +14,7 @@
       cp -r ${self}/config/rofi/colors/* /tmp/themes/rofi/
       cp -r ${self}/config/hyprland/themes/* /tmp/themes/hyprland/
 
-      chmod 775 -R /tmp
+      chmod 775 -R /tmp/themes/
 
       exec dbus-launch --sh-syntax --exit-with-session /usr/bin/Hyprland
     '';

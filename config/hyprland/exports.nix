@@ -20,5 +20,7 @@
     "EDITOR,neovim"
     "VISUAL,neovim"
     "LC_ALL,C"
+
+    "FLAKE,/home/petarch/nixfiles"
   ];
 }

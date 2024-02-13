@@ -52,7 +52,7 @@
      "col.shadow" = "0x44000000";
     };
 
-    misc.disable_hyprland_logo = true;
+    # misc.disable_hyprland_logo = true;
 
     windowrule = [
       "opacity 0.95,^(discord)$"

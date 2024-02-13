@@ -60,7 +60,7 @@
       "ALT, period, focusmonitor,r"
       "ALT, comma, focusmonitor,l"
       "ALT SHIFT,period,movewindow,mon:r"
-      "ALT SHIFT,comma,movewindow,mon:r"
+      "ALT SHIFT,comma,movewindow,mon:l"
 
       "ALT CONTROL,left,splitratio,-0.1"
       "ALT CONTROL,right,splitratio,+0.1"
