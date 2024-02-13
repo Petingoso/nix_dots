@@ -1,0 +1,32 @@
+{
+  "__ConfigsMigration__userValeusSameToDefaultAreCleared": true,
+  "cachedExternalAddons": [
+    "tst_fade_old_tabs@emvaized.com",
+    "@tst-search"
+  ],
+  "configsVersion": 27,
+  "enableLinuxBehaviors": true,
+  "lastSelectedSubPanelProviderId": "@tst-search",
+  "notifiedFeaturesVersion": 9,
+  "optionsExpandedGroups": [
+    "group-logFor",
+    "group-allConfigs"
+  ],
+  "optionsExpandedSections": [
+    "section-appearance",
+    "section-advanced",
+    "section-debug"
+  ],
+  "showExpertOptions": true,
+  "syncDevices": {
+    "device-1650996742500-19313": {
+      "id": "device-1650996742500-19313",
+      "name": "Firefox on Linux",
+      "icon": "device-desktop",
+      "timestamp": 1679412275790
+    }
+  },
+  "userStyleRules": "",
+  "userStyleRulesFieldHeight": "146.6666717529297px",
+  "warnOnCloseTabsByClosebox": false
+}
