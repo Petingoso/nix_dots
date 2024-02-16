@@ -19,7 +19,7 @@
 
       chmod 775 -R /tmp/themes/
 
-      exec dbus-launch --sh-syntax --exit-with-session /usr/bin/Hyprland
+      exec /usr/bin/Hyprland
     '';
     executable = true;
     };

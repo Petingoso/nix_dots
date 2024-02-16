@@ -17,10 +17,6 @@
       inputs.nixpkgs.follows = "home-manager";
     };
 
-    neovim-flake = {
-      url = "github:notashelf/neovim-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
