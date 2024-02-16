@@ -15,7 +15,7 @@
       cp -r ${self}/config/rofi/colors/* /tmp/themes/rofi/
       cp -r ${self}/config/hyprland/themes/* /tmp/themes/hyprland/
 
-      echo 'vim.cmd("colorscheme gruvbox")' >> /tmp/themes/nvim/theme.lua
+      echo 'vim.cmd("colorscheme gruvbox")' >> /tmp/themes/nvim/theme
 
       chmod 775 -R /tmp/themes/
 

@@ -15,7 +15,8 @@
 
     "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
     "QT_QPA_PLATFORM,wayland"
-    "QT_QPA_PLATFORMTHEME,qt6ct"
+    "QT_QPA_PLATFORMTHEME,kvantum"
+    "QT_STYLE_OVERRIDE,kvantum"
 
     "EDITOR,neovim"
     "VISUAL,neovim"
