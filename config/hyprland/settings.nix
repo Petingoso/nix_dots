@@ -53,6 +53,7 @@
     };
 
     # misc.disable_hyprland_logo = true;
+    misc.vfr = true;
 
     windowrule = [
       "opacity 0.95,^(discord)$"

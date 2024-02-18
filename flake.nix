@@ -13,14 +13,14 @@
     };
 
     arkenfox = {
-      url = "github:dwarfmaster/arkenfox-nixos";
+      url = "github:pipelight/arkenfox-nixos";
       inputs.nixpkgs.follows = "home-manager";
     };
 
   };
 
   outputs =
-    inputs@{ self, nixpkgs, nur, home-manager, arkenfox, neovim-flake, ... }:
+    inputs@{ self, nixpkgs, nur, home-manager, arkenfox, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -42,8 +42,6 @@
           ./home.nix
           nur.nixosModules.nur
           arkenfox.hmModules.default
-          inputs.neovim-flake.homeManagerModules.default
-
         ];
       };
     };

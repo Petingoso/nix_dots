@@ -1,7 +1,7 @@
-{ config, pkgs, theme, ... }: {
+{ config, lib, pkgs, theme, ... }: {
 
-  programs.firefox.arkenfox.enable = true;
-  programs.firefox.arkenfox.version = "master";
+  # programs.firefox.arkenfox.enable = true;
+  # programs.firefox.arkenfox.version = "122.0";
 
   xdg.configFile."firefox/treestyle-tab.json".source = ./firefox/config.json;
   programs.firefox = {
@@ -32,15 +32,15 @@
       };
     };
     profiles.Default = {
-      arkenfox = {
-        enable = true;
-        # "0800"."0804"."browser.search.suggest.enabled".value = true;
-        "2800"."2811"."privacy.cpd.history".value = false;
-        "2800"."2820"."privacy.clearOnShutdown.history".value = false;
-        "5000"."5001"."browser.privatebrowsing.autostart".value = false;
-        "5000"."5013"."places.history.enabled".value = true;
-        "5000"."5021"."keyword.enabled".value = true;
-      };
+      # arkenfox = {
+      #   enable = true;
+      #   # "0800"."0804"."browser.search.suggest.enabled".value = true;
+      #   "2800"."2811"."privacy.cpd.history".value = false;
+      #   "2800"."2820"."privacy.clearOnShutdown.history".value = false;
+      #   "5000"."5001"."browser.privatebrowsing.autostart".value = false;
+      #   "5000"."5013"."places.history.enabled".value = true;
+      #   "5000"."5021"."keyword.enabled".value = true;
+      # };
       search = {
         force = true;
         default = "DuckDuckGo";
@@ -88,15 +88,27 @@
         violentmonkey
       ];
 
-      settings = { "general.smoothScroll" = true; };
-      extraConfig = ''
-        user_pref("media.autoplay.enabled.user-gestures-needed",false)
-        user_pref("ui.systemUsesDarkTheme", 1);
-        user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
-        user_pref("full-screen-api.ignore-widgets", true);
-        user_pref("media.ffmpeg.vaapi.enabled", true);
-        user_pref("media.rdd-vpx.enabled", true);
-      '';
+      settings = {
+        "General.smoothScroll" = true;
+        "media.autoplay.enabled.user-gestures-needed" = false;
+        "ui.systemUsesDarkTheme" = 1;
+        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "full-screen-api.ignore-widgets" = true;
+        "media.ffmpeg.vaapi.enabled" = true;
+        "media.rdd-vpx.enabled" = true;
+      };
+      extraConfig = lib.strings.concatStrings [
+        "${builtins.readFile (./firefox/arkenfox.js)}"
+
+        ''
+          user_pref("browser.search.suggest.enabled",true);
+          user_pref("privacy.cpd.history" , false);
+          user_pref("privacy.clearOnShutdown.history" , false);
+          user_pref("browser.privatebrowsing.autostart" , false);
+          user_pref("places.history.enabled" , true);
+          user_pref("keyword.enabled" , true;
+        ''
+      ];
       userChrome = ''
         #TabsToolbar {
           visibility: collapse;

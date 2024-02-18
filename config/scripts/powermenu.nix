@@ -5,7 +5,7 @@
     text = ''
           !/usr/bin/env bash
 
-      prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/power.rasi"
+      prompt="rofi -dmenu -theme ~/.config/rofi/launchers/power.rasi"
 
       uptime=$(uptime -p | sed -e 's/up //g')
 
