@@ -1,5 +1,5 @@
-{ config, pkgs, ... }: {
-  imports = [ ../../variables.nix ];
+{ self,config, ... }: {
+  imports = ["${self}/variables.nix"];
 
   wayland.windowManager.hyprland.settings = {
     bindm = [ "ALT,mouse:272,movewindow" "ALT,mouse:273,resizewindow" ];
@@ -36,7 +36,7 @@
       "ALT CONTROL, E,exec, hyprshade on blue-light-filter"
       "ALT CONTROL, R,exec, hyprshade off"
 
-      "ALT SHIFT, P, exec, gtklock -i"
+      "ALT SHIFT, P, exec, ${config.lock_cmd}"
 
       "ALT SHIFT, T, exec, swaync-client -t"
 

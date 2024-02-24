@@ -3,7 +3,7 @@
   # programs.firefox.arkenfox.enable = true;
   # programs.firefox.arkenfox.version = "122.0";
 
-  xdg.configFile."firefox/treestyle-tab.json".source = ./firefox/config.json;
+  # xdg.configFile."firefox/treestyle-tab.json".source = ./firefox/config.json;
   programs.firefox = {
     enable = true;
 

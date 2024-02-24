@@ -5,5 +5,7 @@
     ./hyprland/exports.nix
     ./hyprland/settings.nix
     ./hyprland/startup.nix
+    ./hyprland/hypridle.nix
+    ./hyprland/hyprlock.nix
   ];
 }

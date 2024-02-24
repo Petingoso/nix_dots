@@ -37,7 +37,7 @@
 
     focus_follows_mouse = true;
 
-    enable_audio_bell = true;
+    enable_audio_bell = false;
 
     remember_window_size = true;
 

@@ -12,15 +12,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    arkenfox = {
-      url = "github:pipelight/arkenfox-nixos";
-      inputs.nixpkgs.follows = "home-manager";
-    };
-
+    hypridle.url = "github:hyprwm/hypridle";
+    hyprlock.url = "github:hyprwm/hyprlock";
   };
 
-  outputs =
-    inputs@{ self, nixpkgs, nur, home-manager, arkenfox, ... }:
+  outputs = inputs@{ self, nixpkgs, nur, home-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -41,7 +37,9 @@
         modules = [
           ./home.nix
           nur.nixosModules.nur
-          arkenfox.hmModules.default
+          inputs.hypridle.homeManagerModules.default
+          inputs.hyprlock.homeManagerModules.default
+          # arkenfox.hmModules.default
         ];
       };
     };

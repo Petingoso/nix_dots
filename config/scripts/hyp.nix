@@ -19,7 +19,7 @@
 
       chmod 775 -R /tmp/themes/
 
-      exec /usr/bin/Hyprland
+      /usr/bin/Hyprland
     '';
     executable = true;
     };
