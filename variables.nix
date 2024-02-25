@@ -5,7 +5,7 @@
       rofi-menu = mkOption { type = str; };
       };
       config = {
-        lock_cmd = "playerctl pause;gtklock -i";
+        lock_cmd = "playerctl pause;/usr/bin/hyprlock";
         rofi-menu =
           "/usr/local/bin/rofi -show drun -theme ${self}/config/rofi/launchers/menu.rasi";
       };
