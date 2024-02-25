@@ -1,7 +1,6 @@
 _: {
   imports = [
     ./firefox.nix
-    ./gtklock.nix
     ./hyprland.nix
     ./kitty.nix
     ./nvim.nix
